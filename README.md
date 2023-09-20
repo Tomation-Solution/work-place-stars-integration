@@ -1,1 +1,1 @@
-# Work Place Stars 4 product INtegration website 
+# Work Place Stars 4 product Integration website 
