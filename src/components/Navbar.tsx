@@ -10,11 +10,7 @@ import logo from "../assets/logo.svg";
 import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { solutionsdata } from "../data/solutionsData";
-<<<<<<< HEAD
-import { loginData } from "../data/solutionsCardData";
-=======
 import { loginData } from "../data/loginData";
->>>>>>> master
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
