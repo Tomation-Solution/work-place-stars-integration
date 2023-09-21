@@ -48,7 +48,7 @@ const CustomPopover: React.FC<CustomPopoverProps> = ({ data, title,loginButton }
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className={`absolute shadow-2xl left-1/2 z-10 mt-3 w-[420px] max-w-sm -translate-x-1/2 transform px-4 sm:px-0  ${loginButton ? "!w-[300px]": "lg:max-w-sm" }`}>
+            <Popover.Panel className={`absolute shadow-2xl left-1/2 z-10 mt-3  max-w-sm -translate-x-1/2 transform px-4 sm:px-0  ${loginButton ? "-translate-x-2/3  w-[250px]": "lg:max-w-sm w-[420px]" }`}>
               <div className="overflow-hidden rounded-lg shadow-lg border-gray-300 ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 bg-white p-4 bg-opacity-[0.97]">
                   {data?.map((item,index) => (

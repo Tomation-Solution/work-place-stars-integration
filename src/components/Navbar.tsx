@@ -69,12 +69,12 @@ const Navbar = () => {
             
           
 
-            
+          
           </ul>
           <div onClick={handleNav} className="xl:hidden">
-            {/* <AiOutlineClose /> */}
+          
             <Bars3Icon className="w-5 h-5" fontSize={23} />
-            {/* <AiOutlineMenu size={25} /> */}
+         
           </div>
         </div>
       </div>
@@ -113,6 +113,7 @@ const Navbar = () => {
           <div className="py-4 flex flex-col">
             <ul className="">
               {/* Services Mobile  */}
+           
               <Popover className="relative">
                 {({ open }) => (
                   <>
@@ -140,18 +141,16 @@ const Navbar = () => {
                       <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-sm -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-xl">
                         <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                           <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
-                            {[
-                              "Performance Management ",
-                              "Process Improvement and Automation",
-                              "Corporate Strategy",
-                            ].map((item) => (
+                            {servicesNavData.map((item,index) => (
                               <a
-                                key={item}
+                                key={index}
+                               href={item?.url}
+                               target={`${item.url ? "_blank" : ""}`}
                                 className="border-b -m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                               >
                                 <div className="ml-4">
                                   <p className="text-sm font-medium text-gray-900 capitalize">
-                                    {item}
+                                    {item.headerText}
                                   </p>
                                 </div>
                               </a>
@@ -192,11 +191,11 @@ const Navbar = () => {
                       <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-sm -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-xl">
                         <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                           <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
-                            {solutionsdata.map((item) => (
+                            {solutionsNavData.map((item,index) => (
                               <a
-                                key={item.url}
-                                href={item.url}
-                                target="_blank"
+                                key={index}
+                                href={item?.url}
+                               target={`${item.url ? "_blank" : ""}`}
                                 className="border-b -m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                               >
                                 <div className="ml-4">
@@ -242,18 +241,16 @@ const Navbar = () => {
                       <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-sm -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-xl">
                         <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                           <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
-                            {[
-                              "Our Team",
-                              "Our Client & Testimonials",
-                              "Our Value Proposition, Our Mission & Vision",
-                            ].map((item) => (
+                            {aboutNavData.map((item,index) => (
                               <a
-                                key={item}
+                                key={index}
+                                href={item?.url}
+                                target={`${item.url ? "_blank" : ""}`}
                                 className="border-b -m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                               >
                                 <div className="ml-4">
                                   <p className="text-sm font-medium text-gray-900 capitalize">
-                                    {item}
+                                    {item.headerText}
                                   </p>
                                 </div>
                               </a>
@@ -323,8 +320,8 @@ const Navbar = () => {
                               {loginData.map((item) => (
                                 <a
                                   key={item.url}
-                                  href={item.url}
-                                  target="_blank"
+                                  href={item?.url}
+                                  target={`${item.url ? "_blank" : ""}`}
                                   className="border-b -m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                                 >
                                   <div className="ml-4">

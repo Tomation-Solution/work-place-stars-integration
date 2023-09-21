@@ -16,7 +16,7 @@
 // import img16 from "../assets/ourclients/img16.svg";
 import mainimge from "../assets/ourclients/american-client.jpeg";
 
-import ClientCard from "../components/ClientCard";
+// import ClientCard from "../components/ClientCard";
 
 const OurClients = () => {
   return (

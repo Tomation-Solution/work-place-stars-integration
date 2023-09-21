@@ -1,4 +1,4 @@
-import Banner from "../sections/Banner"
+import Hero from "../sections/Hero"
 import OurClients from "../sections/OurClients"
 import OurLeaders from "../sections/OurLeaders"
 import ReachOut from "../sections/ReachOut"
@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <div className="font-poppins" >
     scfas
-    <Banner />
+    <Hero />
     <Solutions />
     <WhoWeAre />
     <OurClients />

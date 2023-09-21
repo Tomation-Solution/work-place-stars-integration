@@ -20,26 +20,26 @@ export const solutionsNavData=[
 export const servicesNavData=[
     {
         headerText:'Performance Mangement',
-        url:""
+        url:"/services/performance-mangement"
     },
     {
         headerText:'Process Improvement and Automation',
-        url:""
+        url:"/services/process-improvement-and-automation"
     },
     {
         headerText:'Corporate Strategy',
-        url:""
+        url:"/services/corporate-strategy"
     },   
     {
         headerText:'International Market Entry',
-        url:""
+        url:"/services/international-market-entry"
     },   
 ]
 
 export const aboutNavData=[
     {
         headerText:'Our Team',
-        url:""
+        url:"/about-team"
     },
     {
         headerText:'Our Client and Testimonials',
@@ -47,7 +47,7 @@ export const aboutNavData=[
     },
     {
         headerText:'Our Value Proposition, Our Mission & Vision',
-        url:""
+        url:"/solutions/values-mission-vision"
     },   
 ]
 

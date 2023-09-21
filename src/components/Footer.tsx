@@ -10,7 +10,7 @@ const Footer = () => {
      
 
       <div className="mx-6 py-10 sm:text-center text-left md:text-left text-black">
-        <div className="grid-1 sm:grid-cols-2 grid gap-8 md:grid-cols-2 lg:grid-cols-5">
+        <div className="grid-1 sm:grid-cols-2 grid gap-8 md:grid-cols-2 lg:grid-cols-5 ">
           <div className="col-span-1 lg:col-span-2 spacey-3">
             <h6 className="mb-4 flex items-center justify-left sm:justify-around font-semibold uppercase md:justify-start">
               
