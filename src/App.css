@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    .navlink {
+      @apply ml-6  capitalize hover:border-b text-base font-normal hover:text-primary  
+    }
+    .special-section-header{
+        @apply font-bold md:text-5xl text-3xl text-primary
+    }
+  }
+  
+
+
+
+  
