@@ -1,19 +1,21 @@
-import img1 from "../assets/ourclients/img1.svg";
-import img2 from "../assets/ourclients/img2.svg";
-import img3 from "../assets/ourclients/img3.svg";
-import img4 from "../assets/ourclients/img4.svg";
-import img5 from "../assets/ourclients/img5.svg";
-import img6 from "../assets/ourclients/img6.svg";
-import img7 from "../assets/ourclients/img7.svg";
-import img8 from "../assets/ourclients/img8.svg";
-import img9 from "../assets/ourclients/img9.svg";
-import img10 from "../assets/ourclients/img10.svg";
-import img11 from "../assets/ourclients/img11.svg";
-import img12 from "../assets/ourclients/img12.svg";
-import img13 from "../assets/ourclients/img13.svg";
-import img14 from "../assets/ourclients/img14.svg";
-import img15 from "../assets/ourclients/img15.svg";
-import img16 from "../assets/ourclients/img16.svg";
+// import img1 from "../assets/ourclients/img1.svg";
+// import img2 from "../assets/ourclients/img2.svg";
+// import img3 from "../assets/ourclients/img3.svg";
+// import img4 from "../assets/ourclients/img4.svg";
+// import img5 from "../assets/ourclients/img5.svg";
+// import img6 from "../assets/ourclients/img6.svg";
+// import img7 from "../assets/ourclients/img7.svg";
+// import img8 from "../assets/ourclients/img8.svg";
+// import img9 from "../assets/ourclients/img9.svg";
+// import img10 from "../assets/ourclients/img10.svg";
+// import img11 from "../assets/ourclients/img11.svg";
+// import img12 from "../assets/ourclients/img12.svg";
+// import img13 from "../assets/ourclients/img13.svg";
+// import img14 from "../assets/ourclients/img14.svg";
+// import img15 from "../assets/ourclients/img15.svg";
+// import img16 from "../assets/ourclients/img16.svg";
+import mainimge from "../assets/ourclients/american-client.jpeg";
+
 import ClientCard from "../components/ClientCard";
 
 const OurClients = () => {
@@ -29,7 +31,11 @@ const OurClients = () => {
         </h3> */}
       </h3>
 
-      <div className="container grid grid-cols-3 md:grid-cols-4 place-items-center">
+      <div className="grid place-items-center" >
+        <img src={mainimge} alt=""  />
+      </div>
+
+      {/* <div className="container grid grid-cols-3 md:grid-cols-4 place-items-center">
         <ClientCard image={img1} />
         <ClientCard image={img2} />
         <ClientCard image={img3} />
@@ -46,7 +52,7 @@ const OurClients = () => {
         <ClientCard image={img14} />
         <ClientCard image={img15} />
         <ClientCard image={img16} />
-      </div>
+      </div> */}
     </div>
   );
 };
