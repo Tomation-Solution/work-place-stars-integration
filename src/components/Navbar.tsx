@@ -10,7 +10,11 @@ import logo from "../assets/logo.svg";
 import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { solutionsdata } from "../data/solutionsData";
+<<<<<<< HEAD
 import { loginData } from "../data/solutionsCardData";
+=======
+import { loginData } from "../data/loginData";
+>>>>>>> master
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -359,18 +363,18 @@ const Navbar = () => {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-[250px] max-w-xl -translate-x-2/3 transform px-4 sm:px-0 lg:max-w-xl">
+                    <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-[250px] max-w-xl -translate-x-2/3 transform px-2 sm:px-0 lg:max-w-xl">
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                        <div className="relative grid gap-8 bg-white p-4">
+                        <div className="relative grid gap-8 bg-white p-4 bg-opacity-[0.93] ">
                           {loginData.map((item) => (
                             <a
                               key={item.headerText}
                               target="_blank"
                               href={item.url}
-                              className="border-b -m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                              className=" -m-3 flex items-center p-2 rounded-lg  transition duration-150 ease-in-out hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                             >
                               <div className="ml-4">
-                                <p className="text-base font-medium text-[#415373]">
+                                <p className="text-sm font-medium text-[#415373]">
                                   {item.headerText}
                                 </p>
                                 {/* <p className="text-sm text-gray-500">

@@ -20,11 +20,11 @@ const WhoWeAre = () => {
                         </h3> */}
                     </section>
                     <section  className='flex-[0.6]' >
-                        <p className='xl:text-[15px] text-justify text-sm md:text-base' >Workplace Stars LLC is a global enterprise transformation solution provider with focus on: performance improvement-based employee engagement solution, performance management system development as well as automation, business growth-based strategy development, process improvement and digitalization. Our solutions utilize technologies that simplifies service delivery for the effective and efficient operations of our numerous clients. </p>
+                        <p className=' text-justify text-base' >Workplace Stars LLC is a global enterprise transformation solution provider with focus on: performance improvement-based employee engagement solution, performance management system development as well as automation, business growth-based strategy development, process improvement and digitalization. Our solutions utilize technologies that simplifies service delivery for the effective and efficient operations of our numerous clients. </p>
                     </section>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[100px] gap-y-10 px-5"  >
-                <QuickInfo image={image1} header="Why Choose Us" mainText="At Workplace Stars, you're a vital partners, and the value we bring to your businesses directly influences our organization's success. Our services are custom-tailored to meet your needs." />
+                <QuickInfo image={image1} header="Why Choose Us" mainText="At Workplace Stars, you're a vital partner, and the value we bring to your businesses directly influences our organization's success. Our services are custom-tailored to meet your needs." />
                 <QuickInfo  image={image2}  header='Our Mission' mainText='To improve companies’ growth, profitability, and peoples’ working lives, benefit society and create STAR Workplaces - 1 STAR at a time.' blueText={true} />
                 <QuickInfo  image={image3} header='Our Vision' mainText='To become the transformational point for upwardly mobile organizations via effective and efficient strategy development, implementation and manpower utilization. ' />
             </div>

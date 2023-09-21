@@ -28,9 +28,7 @@ const ReachOut = () => {
                         </aside>
                     </div>
                 </div>
-                <div className="flex items-center gap-2 flex-wrap" >
-                    <p className="text-primary" >Business Address: 1601-1 N Main St #3159,Jacksonville, FL,USA 32206 </p>
-                </div>
+              
             </div>
         </div>
         <div className="relative grid place-items-center" >

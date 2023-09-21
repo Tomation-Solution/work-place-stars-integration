@@ -16,9 +16,12 @@ const Footer = () => {
               
               <img src={logo} alt=""  />
             </h6>
-            <p className='text-[15px]'  >
+            <p className='text-[15px] my-2'  >
             Discover Workplace Stars: Your Partner for Employee Engagement Surveys, Converting Feedback into Actionable Insights, and Driving Business Excellence with Advanced Performance Tech and Holistic Process Consulting.
             </p>
+            <div className="flex items-center gap-2 flex-wrap" >
+                    <p className="text-primary" >Business Address: 1601-1 N Main St #3159,Jacksonville, FL, USA</p>
+                </div>
           </div>
 
           <div className="">
