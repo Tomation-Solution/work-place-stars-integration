@@ -1,24 +1,29 @@
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { Popover, Transition } from "@headlessui/react";
-import { Fragment,useState } from "react";
-import Select from 'react-select';
+import { Fragment} from "react";
+// import Select from "react-select";
 
-const options = [
-  { value: 'Org360', label: 'Org360' },
-  { value: 'E-metric Suite', label: 'E-metric Suite' },
-  { value: 'Sequential Jobs', label: 'Sequential Jobs' },
-];
-
-
+// const options = [
+//   { value: "Org360", label: "Org360" },
+//   { value: "E-metric Suite", label: "E-metric Suite" },
+//   { value: "Sequential Jobs", label: "Sequential Jobs" },
+// ];
 
 interface CustomPopoverProps {
   title: string;
-  demoButton?:boolean;
-  // className: string;
+  demoButton?: boolean;
 }
-const CustomPopOverWithForm: React.FC<CustomPopoverProps> = ({ title,demoButton }) => {
 
-  const [selectedService, setSelectedService] = useState(null);
+const CustomPopOverWithForm: React.FC<CustomPopoverProps> = ({
+  title,
+  demoButton,
+}) => {
+  // const [selectedService, setSelectedService] = useState(null);
+
+  // const handleChange = (newValue: string, actionMeta: any) => {
+  //   setSelectedService(newValue);
+  // };
+
   return (
     <Popover className="relative">
       {({ open }) => (
@@ -26,24 +31,31 @@ const CustomPopOverWithForm: React.FC<CustomPopoverProps> = ({ title,demoButton 
           <Popover.Button
             className={`
       ${open ? "" : "text-opacity-90"}
-      ${demoButton ? " w-[150px]  mr-3 text-primary border bg-white  border-primary  px-3 py-[6px] rounded-md group inline-flex items-center  text-[15px] font-normal  hover:text-opacity-100" : "group inline-flex items-center rounded-mdpx-3 py-2 text-base font-medium  hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"}
+      ${
+        demoButton
+          ? " w-[150px]  mr-3 text-primary border bg-white  border-primary  px-3 py-[6px] rounded-md group inline-flex items-center  text-[15px] font-normal  hover:text-opacity-100"
+          : "group inline-flex items-center rounded-mdpx-3 py-2 text-base font-medium  hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+      }
      
 
       `}
           >
-            {demoButton ? 
-            <li className="text-center  w-full h-full border-b-primary">Request Demo{" "}</li>:
-            
-            <li className="navlink flex items-center capitalize">{title}</li>
-          }
-          {demoButton ? "" : 
-          
-            <ChevronDownIcon
-              className={`${open ? "" : "text-opacity-70"}
+            {demoButton ? (
+              <li className="text-center  w-full h-full border-b-primary">
+                Request Demo{" "}
+              </li>
+            ) : (
+              <li className="navlink flex items-center capitalize">{title}</li>
+            )}
+            {demoButton ? (
+              ""
+            ) : (
+              <ChevronDownIcon
+                className={`${open ? "" : "text-opacity-70"}
         ml-[2px] h-5 w-5 text-black transition duration-150 ease-in-out group-hover:text-opacity-80`}
-              aria-hidden="true"
-            />
-          }
+                aria-hidden="true"
+              />
+            )}
           </Popover.Button>
           <Transition
             as={Fragment}
@@ -99,13 +111,25 @@ const CustomPopOverWithForm: React.FC<CustomPopoverProps> = ({ title,demoButton 
                           Solution
                         </label>
 
-                        <Select
+                        {/* <Select
                           isMulti
                           defaultValue={selectedService}
-                          onChange={setSelectedService}
+                          onChange={handleChange}
                           options={options}
-                        />
-                    
+                        /> */}
+
+                        <select
+                          id="solution"
+                          name="solution"
+                          className="mt-1 p-2 border border-gray-300 rounded-md w-full text-sm"
+                          // Add your solution dropdown handling logic here
+                        >
+                          <option value="Org360">Org360</option>
+                          <option value="E-metric Suite">E-metric Suite</option>
+                          <option value="Sequential Jobs">
+                            Sequential Jobs
+                          </option>
+                        </select>
                       </div>
                       <div className="mb-4">
                         <label
@@ -122,7 +146,7 @@ const CustomPopOverWithForm: React.FC<CustomPopoverProps> = ({ title,demoButton 
                           // Add your company input handling logic here
                         />
                       </div>
-                      
+
                       <div className="mt-4">
                         <button
                           type="submit"

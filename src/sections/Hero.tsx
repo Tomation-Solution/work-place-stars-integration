@@ -1,3 +1,7 @@
+import { Canvas } from "@react-three/fiber"
+import {Suspense} from 'react'
+import Earth from "../components/Earth"
+
 const Hero = () => {
   return (
      <div className="font-poppins bg-gradient-to-br from-[#0d5574] via-[#337ba0] to-[#569fcb] p-4 h-screen w-full flex items-center  ">
@@ -20,7 +24,11 @@ const Hero = () => {
       </div>
     </div>
     <div>
-
+        <Canvas>
+          <Suspense fallback={null}>
+            <Earth />
+          </Suspense>
+        </Canvas>
     </div>
   </div>
   )

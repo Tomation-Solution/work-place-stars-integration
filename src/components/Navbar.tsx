@@ -8,7 +8,7 @@ import {
 import logo from "../assets/logo.svg";
 import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import { solutionsdata } from "../data/solutionsData";
+// import { solutionsdata } from "../data/solutionsData";
 import { loginData } from "../data/loginData";
 import CustomPopover from "./CustomPopover";
 import { aboutNavData,servicesNavData,solutionsNavData } from "../data/navData";
