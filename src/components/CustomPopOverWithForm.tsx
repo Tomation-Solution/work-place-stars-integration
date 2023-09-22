@@ -1,14 +1,23 @@
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { Popover, Transition } from "@headlessui/react";
-import { Fragment} from "react";
-// import Select from "react-select";
+import { Fragment,useState } from "react";
 
-// const options = [
-//   { value: "Org360", label: "Org360" },
-//   { value: "E-metric Suite", label: "E-metric Suite" },
-//   { value: "Sequential Jobs", label: "Sequential Jobs" },
-// ];
+import Select from 'react-select';
 
+interface Option {
+	value: string;
+	label: string;
+  }
+
+
+const options = [
+	{ value: 'chocolate', label: 'Chocolate' },
+	{ value: 'strawberry', label: 'Strawberry' },
+	{ value: 'vanilla', label: 'Vanilla' },
+  ];
+
+
+  
 interface CustomPopoverProps {
   title: string;
   demoButton?: boolean;
@@ -18,11 +27,14 @@ const CustomPopOverWithForm: React.FC<CustomPopoverProps> = ({
   title,
   demoButton,
 }) => {
-  // const [selectedService, setSelectedService] = useState(null);
+	const [selectedOption, setSelectedOptions] = useState<Option[]|null>(null);
 
-  // const handleChange = (newValue: string, actionMeta: any) => {
-  //   setSelectedService(newValue);
-  // };
+	const handleSelectChange = (
+    newValue: Option[] | null,
+   
+  ) => {
+    setSelectedOptions(newValue);
+  };
 
   return (
     <Popover className="relative">
@@ -110,26 +122,16 @@ const CustomPopOverWithForm: React.FC<CustomPopoverProps> = ({
                         >
                           Solution
                         </label>
+                        {/* <CustomListBox /> */}
+						<Select
+						isMulti={true}
+        defaultValue={selectedOption}
+        // onChange={setSelectedOption}
+        options={options}
+		onChange={handleSelectChange as any}
+      />
 
-                        {/* <Select
-                          isMulti
-                          defaultValue={selectedService}
-                          onChange={handleChange}
-                          options={options}
-                        /> */}
-
-                        <select
-                          id="solution"
-                          name="solution"
-                          className="mt-1 p-2 border border-gray-300 rounded-md w-full text-sm"
-                          // Add your solution dropdown handling logic here
-                        >
-                          <option value="Org360">Org360</option>
-                          <option value="E-metric Suite">E-metric Suite</option>
-                          <option value="Sequential Jobs">
-                            Sequential Jobs
-                          </option>
-                        </select>
+                        
                       </div>
                       <div className="mb-4">
                         <label
