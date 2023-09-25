@@ -73,7 +73,7 @@ const Navbar = () => {
           </ul>
           <div onClick={handleNav} className="xl:hidden">
           
-            <Bars3Icon className="w-5 h-5" fontSize={23} />
+            <Bars3Icon className="w-5 h-5 xl:hidden" fontSize={23} />
          
           </div>
         </div>
@@ -82,13 +82,13 @@ const Navbar = () => {
       {/* ------------------------------------- MOBILE VIEW -------------------------------------------------------- */}
       <div
         className={
-          nav ? "xl:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
+          nav ? "xl:hidden  fixed left-0 top-0 w-full h-screen bg-black/70" : ""
         }
       >
         <nav
           className={
             nav
-              ? "font-poppins md:hidden fixed left-0 top-0 w-[85%] sm:w-[60%] md:w-[45%] h-screen bg-white p-10 ease-in duration-500"
+              ? "font-poppins xl:hidden fixed left-0 top-0 w-[85%] sm:w-[60%] md:w-[60%]  h-screen bg-white p-10 ease-in duration-500"
               : "fixed left-[-150%] top-0  p-10 ease-in duration-500"
           }
         >
@@ -142,10 +142,11 @@ const Navbar = () => {
                         <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                           <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
                             {servicesNavData.map((item,index) => (
-                              <a
+                              <Link
                                 key={index}
-                               href={item?.url}
-                               target={`${item.url ? "_blank" : ""}`}
+                               to={item?.url}
+                               onClick={() => setNav(false)}
+                              //  target={`${item.url ? "_blank" : ""}`}
                                 className="border-b -m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                               >
                                 <div className="ml-4">
@@ -153,7 +154,7 @@ const Navbar = () => {
                                     {item.headerText}
                                   </p>
                                 </div>
-                              </a>
+                              </Link>
                             ))}
                           </div>
                         </div>
@@ -242,10 +243,11 @@ const Navbar = () => {
                         <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                           <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
                             {aboutNavData.map((item,index) => (
-                              <a
+                              <Link
                                 key={index}
-                                href={item?.url}
-                                target={`${item.url ? "_blank" : ""}`}
+                                to={item.url}
+                                onClick={() => setNav(false)}
+                               
                                 className="border-b -m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                               >
                                 <div className="ml-4">
@@ -253,7 +255,7 @@ const Navbar = () => {
                                     {item.headerText}
                                   </p>
                                 </div>
-                              </a>
+                              </Link>
                             ))}
                           </div>
                         </div>

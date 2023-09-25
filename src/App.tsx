@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import RequestADemo from "./pages/RequestADemo";
 import ErrorPage from "./pages/ErrorPage";
-import OurTeam from "./pages/OurTeam";
+import OurTeam from "./pages/about/OurTeam";
 import PerformanceManagement from "./pages/services/PerformanceManagement";
 import CorporateStrategy from "./pages/services/CorporateStrategy";
 import InternationalMarketEntry from "./pages/services/InternationalMarketEntry";
