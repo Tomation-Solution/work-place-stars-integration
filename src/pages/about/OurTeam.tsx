@@ -1,7 +1,7 @@
 import Banner from "../../components/Banner";
 import aboutImage from "../../assets/aboutus/about-us-img.jpg";
 
-const AboutTeam = () => {
+const OurTeam = () => {
   return (
     <section className="font-poppins">
       <Banner image={aboutImage} pageTitle="Our Team" />
@@ -34,4 +34,4 @@ const AboutTeam = () => {
   )
 }
 
-export default AboutTeam
+export default OurTeam
