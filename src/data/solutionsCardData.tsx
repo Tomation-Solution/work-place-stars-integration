@@ -8,7 +8,7 @@ export const allSolutionsCardData=[
         headerText:'Employee Engagement',
         solution:'(Org360)',
         aboutHeaderText:"Elevate your business with our Employee Feedback Survey.",
-        readMore:"https://raredolls.tk/",
+        readMore:"https://raredolls.workplacestars.com",
         freePulse:"https://raredolls.tk/login.php"
     },
     {
@@ -16,7 +16,7 @@ export const allSolutionsCardData=[
         headerText:'Performance Management',
         solution:'(E-Metrics Suite)',
         aboutHeaderText:"Simplify HR tasks, manage employee records effortlessly",
-        readMore:"https://www.emetricsuite.com/",
+        readMore:"https://emetricsuite.workplacestars.com",
         freePulse:"https://app.emetricsuite.com/"
     },
     {
@@ -24,7 +24,7 @@ export const allSolutionsCardData=[
         headerText:'Workplace Placement',
         solution:'(Smart Recruitment)',
         aboutHeaderText:"Elevate your business with our Employee Feedback Survey.",
-        readMore:"https://sequentialjobs.com/",
+        readMore:"https://sequentialjobs.workplacestars.com",
         freePulse:"https://app.sequentialjobs.com/login",
        
     },

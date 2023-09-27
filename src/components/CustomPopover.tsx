@@ -1,7 +1,8 @@
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import React from "react";
 
 interface DropDownData{
   headerText: string;
@@ -13,7 +14,7 @@ interface CustomPopoverProps {
   data:DropDownData[];
   title: string;
   loginButton?:boolean;
-  // className: string;
+  
 }
 const CustomPopover: React.FC<CustomPopoverProps> = ({ data, title,loginButton }) => {
   return (
@@ -53,8 +54,8 @@ const CustomPopover: React.FC<CustomPopoverProps> = ({ data, title,loginButton }
               <div className="overflow-hidden rounded-lg shadow-lg border-gray-300 ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-8 bg-white p-4 bg-opacity-[0.97]">
                   {data?.map((item,index) => (
-                    <Link
-                    to={item?.url}
+                    <a
+                    href={item?.url}
                       key={index}
 
                       // target={`${item.url ? "_blank" : ""}`}
@@ -68,7 +69,7 @@ const CustomPopover: React.FC<CustomPopoverProps> = ({ data, title,loginButton }
                           {item.aboutHeaderText}
                         </p>
                       </div>
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </div>
