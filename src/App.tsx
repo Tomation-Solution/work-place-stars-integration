@@ -1,44 +1,123 @@
-import { Routes, Route } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import HomePage from "./pages/HomePage";
-import RequestADemo from "./pages/RequestADemo";
 import ErrorPage from "./pages/ErrorPage";
-import PerformanceManagement from "./pages/services/PerformanceManagement";
-import CorporateStrategy from "./pages/services/CorporateStrategy";
-import InternationalMarketEntry from "./pages/services/InternationalMarketEntry";
-import ProcessImprovementAndAutomation from "./pages/services/ProcessImprovementAndAutomation";
-import ValuesMissionVison from "./pages/about/ValuesMissionVison";
-import OurTeam from "./pages/about/OurTeam";
+import { Suspense, lazy } from "react";
+import Loader from "./components/Loader";
+import DashboardLayout from "./layout/DashboardLayout";
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-
-        {/* for mobile only since I can't drop pop up form*/}
-        <Route path="/request-demo" element={<RequestADemo />} /> 
-
-
-        {/* Services */}
-        <Route path="/services/corporate-strategy" element={<CorporateStrategy />} />
-        <Route path="/services/international-market-entry" element={<InternationalMarketEntry />} />
-        <Route path="/services/performance-mangement" element={<PerformanceManagement />} />
-        <Route path="/services/process-improvement-and-automation" element={<ProcessImprovementAndAutomation />} />
-
-        {/* About */}
-        <Route path="/about-team" element={<OurTeam />} />
-        <Route path="/solutions/values-mission-vision" element={<ValuesMissionVison />} />
-        <Route path="/*" element={<ErrorPage />} />
-      
-      </Routes>
-      <Footer />
-    </>
+  const HomePage = lazy(() => import("./pages/HomePage"));
+  const RequestADemo = lazy(() => import("./pages/RequestADemo"));
+  const CorporateStrategy = lazy(
+    () => import("./pages/services/CorporateStrategy")
   );
+  const InternationalMarketEntry = lazy(
+    () => import("./pages/services/InternationalMarketEntry")
+  );
+  const PerformanceManagement = lazy(
+    () => import("./pages/services/PerformanceManagement")
+  );
+  const ProcessImprovementAndAutomation = lazy(
+    () => import("./pages/services/ProcessImprovementAndAutomation")
+  );
+  const OurTeam = lazy(() => import("./pages/about/OurTeam"));
+  const ValuesMissionVison = lazy(
+    () => import("./pages/about/ValuesMissionVison")
+  );
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <Suspense fallback={<Loader />}>
+          <DashboardLayout>
+            <HomePage />
+          </DashboardLayout>
+        </Suspense>
+      ),
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/request-demo",
+      element: (
+        <Suspense fallback={<Loader />}>
+          <DashboardLayout>
+            <RequestADemo />
+          </DashboardLayout>
+        </Suspense>
+      ),
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/services/corporate-strategy",
+      element: (
+        <Suspense fallback={<Loader />}>
+          <DashboardLayout>
+            <CorporateStrategy />
+          </DashboardLayout>
+        </Suspense>
+      ),
+    },
+    {
+      path: "/services/international-market-entry",
+      element: (
+        <Suspense fallback={<Loader />}>
+          <DashboardLayout>
+            <InternationalMarketEntry />
+          </DashboardLayout>
+        </Suspense>
+      ),
+    },
+    {
+      path: "/services/performance-mangement",
+      element: (
+        <Suspense fallback={<Loader />}>
+          <DashboardLayout>
+            <PerformanceManagement />
+          </DashboardLayout>
+        </Suspense>
+      ),
+    },
+    {
+      path: "/services/process-improvement-and-automation",
+      element: (
+        <Suspense fallback={<Loader />}>
+          <DashboardLayout>
+            <ProcessImprovementAndAutomation />
+          </DashboardLayout>
+        </Suspense>
+      ),
+    },
+    {
+      path: "/about-team",
+      element: (
+        <Suspense fallback={<Loader />}>
+          <DashboardLayout>
+            <OurTeam />
+          </DashboardLayout>
+        </Suspense>
+      ),
+    },
+    {
+      path: "/solutions/values-mission-vision",
+      element: (
+        <Suspense fallback={<Loader />}>
+          <DashboardLayout>
+            <ValuesMissionVison />
+          </DashboardLayout>
+        </Suspense>
+      ),
+    },
+    {
+      path: "/*",
+      element: <ErrorPage />,
+    },
+  ]);
+
+  return<>
+   <RouterProvider router={router} fallbackElement={<Loader />} />
+  </>;
 }
 
 export default App;

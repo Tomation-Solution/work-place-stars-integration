@@ -1,39 +1,48 @@
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { Popover, Transition } from "@headlessui/react";
-import { Fragment,useState } from "react";
+import { Fragment, useState } from "react";
 
-import Select from 'react-select';
+import Select from "react-select";
 
 interface Option {
-	value: string;
-	label: string;
-  }
+  value: string;
+  label: string;
+}
 
-
-const options = [
-	{ value: 'chocolate', label: 'Chocolate' },
-	{ value: 'strawberry', label: 'Strawberry' },
-	{ value: 'vanilla', label: 'Vanilla' },
-  ];
-
-
-  
 interface CustomPopoverProps {
   title: string;
   demoButton?: boolean;
 }
 
-const CustomPopOverWithForm: React.FC<CustomPopoverProps> = ({
-  title,
-  demoButton,
-}) => {
-	const [selectedOption, setSelectedOptions] = useState<Option[]|null>(null);
+const serviceOptions = [
+  { value: "Performance Mangement", label: "Performance Mangement" },
+  {
+    value: "Process Improvement and Automation",
+    label: "Process Improvement and Automation",
+  },
+  { value: "Corporate Strategy", label: "Corporate Strategy" },
+  { value: "International Market Entry", label: "International Market Entry" },
+];
+const solutionOptions = [
+  { value: "Org360", label: "Org360" },
+  { value: "E-metric Suite", label: "E-metric Suite" },
+  { value: "Sequential Jobs", label: "Sequential Jobs" },
+];
 
-	const handleSelectChange = (
-    newValue: Option[] | null,
-   
-  ) => {
-    setSelectedOptions(newValue);
+const CustomPopOverWithForm = ({ title, demoButton }: CustomPopoverProps) => {
+  const [selectedServices, setSelectedServiceOptions] = useState<
+    Option[] | null
+  >(null);
+  const [selectedSolutions, setSelectedSolutionsOptions] = useState<
+    Option[] | null
+  >(null);
+
+  const handleSelectServiceChange = (newValue: Option[] | null) => {
+    setSelectedServiceOptions(newValue);
+  };
+
+  const handleSelectSolutionChange = (newValue: Option[] | null) => {
+    setSelectedSolutionsOptions(newValue);
   };
 
   return (
@@ -115,6 +124,26 @@ const CustomPopOverWithForm: React.FC<CustomPopoverProps> = ({
                           // Add your phone number input handling logic here
                         />
                       </div>
+
+                      {/* Services multi dropdown */}
+                      <div className="mb-4">
+                        <label
+                          htmlFor="services"
+                          className="block text-sm font-normal text-gray-700"
+                        >
+                          Services
+                        </label>
+                        {/* <CustomListBox /> */}
+                        <Select
+                          isMulti={true}
+                          defaultValue={selectedServices}
+                          // onChange={setSelectedOption}
+                          options={serviceOptions}
+                          onChange={handleSelectServiceChange as any}
+                        />
+                      </div>
+
+                      {/* Soltitons multi dropdown */}
                       <div className="mb-4">
                         <label
                           htmlFor="solution"
@@ -123,16 +152,15 @@ const CustomPopOverWithForm: React.FC<CustomPopoverProps> = ({
                           Solution
                         </label>
                         {/* <CustomListBox /> */}
-						<Select
-						isMulti={true}
-        defaultValue={selectedOption}
-        // onChange={setSelectedOption}
-        options={options}
-		onChange={handleSelectChange as any}
-      />
-
-                        
+                        <Select
+                          isMulti={true}
+                          defaultValue={selectedSolutions}
+                          // onChange={setSelectedOption}
+                          options={solutionOptions}
+                          onChange={handleSelectSolutionChange as any}
+                        />
                       </div>
+
                       <div className="mb-4">
                         <label
                           htmlFor="company"

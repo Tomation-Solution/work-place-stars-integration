@@ -1,10 +1,10 @@
-import aboutImage from "../../assets/aboutus/about-us-img.jpg";
+import bannerImage from "../../assets/top-banner-image.jpg";
 import Banner from '../../components/Banner'
 
 const InternationalMarketEntry = () => {
   return (
     <section className="font-poppins">
-      <Banner image={aboutImage} pageTitle="Our Services" />
+      <Banner image={bannerImage} pageTitle="Our Services" />
 
       <div className="container px-5 m8xlax-w- mx-auto ">
         <div className="mt-[70px] mb-[50px] font-light text-justify">

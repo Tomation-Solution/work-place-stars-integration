@@ -18,7 +18,7 @@ const OurLeaders = () => {
             <img src={linkedin} alt="" />
             <aside>
               <h3 className="font-bold text-base">Bob Ebers</h3>
-              <p className="font-normal text-sm">President & Founder</p>
+              <p className="font-normal text-sm">Founder</p>
             </aside>
           </div>
         </div>
@@ -26,17 +26,13 @@ const OurLeaders = () => {
         {/* Middle Card */}
         <div className="border shadow-md p-4 border-gray-200 h-full max-w-[!400px] w-[300px] sm:w-[320px] text-justify">
           {/* Add content here */}
-          Enterprise Metric Suite Solutions Limited is made up of an intricate
-          blend of professionals and consultants, who bring their years of
-          experience and know-how to every project undertaken. Our structure
-          consists of a board, associates, and management team; each ensuring
-          that our clients receive the best services that would aid them in
-          achieving their goals.
-          1.	Robert P Ebers
-2.	Emmanuel Madubuike
-3.	Mark Smith
-4.	Emmanuel Moses
-
+          Workplace Stars is made up of an intricate blend of professionals and
+          consultants, who bring their years of experience and know-how to every
+          project undertaken. Our structure consists of a board, associates, and
+          management team; each ensuring that our clients receive the best
+          services that would aid them in achieving their goals. Together, we
+          are committed to fostering innovation and excellence in the workplace,
+          making Workplace Stars your trusted partner in success.
         </div>
 
         {/* Card 3 */}
@@ -46,7 +42,7 @@ const OurLeaders = () => {
             <img src={linkedin} alt="" />
             <aside>
               <h3 className="font-bold text-base">Emmanuel Madubuike</h3>
-              <p className="font-normal text-sm">President & Founder</p>
+              <p className="font-normal text-sm">Partner</p>
             </aside>
           </div>
         </div>

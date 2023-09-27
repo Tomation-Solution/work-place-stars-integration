@@ -9,7 +9,7 @@ export const allSolutionsCardData=[
         solution:'(Org360)',
         aboutHeaderText:"Elevate your business with our Employee Feedback Survey.",
         readMore:"https://raredolls.tk/",
-        freePulse:"https://raredolls.tk/review/"
+        freePulse:"https://raredolls.tk/login.php"
     },
     {
         image:emetric,
@@ -17,7 +17,7 @@ export const allSolutionsCardData=[
         solution:'(E-Metrics Suite)',
         aboutHeaderText:"Simplify HR tasks, manage employee records effortlessly",
         readMore:"https://www.emetricsuite.com/",
-        freePulse:""
+        freePulse:"https://app.emetricsuite.com/"
     },
     {
         image:sequential,
@@ -25,7 +25,7 @@ export const allSolutionsCardData=[
         solution:'(Smart Recruitment)',
         aboutHeaderText:"Elevate your business with our Employee Feedback Survey.",
         readMore:"https://sequentialjobs.com/",
-        freePulse:"",
+        freePulse:"https://app.sequentialjobs.com/login",
        
     },
     {

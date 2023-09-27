@@ -44,9 +44,11 @@ const Navbar = () => {
       }
     >
       <div className="flex font-poppins justify-between items-center h-full w-full  2xl:px-10  mx-auto px-6 2xl:w-[85%]">
+        <Link to='/'>
         <div>
           <img className="h-full object-contain py-3" src={logo} alt="" />
         </div>
+        </Link>
         <div>
           <ul className="hidden xl:flex items-center">
 
@@ -58,8 +60,8 @@ const Navbar = () => {
           
             <Link
               className="mr-4"
-              to="https://raredolls.tk/become-provider.html"
-              target="_blank"
+              to="https://sequentialjobs.com/blog"
+              
             >
               <li className="navlink">Research</li>
             </Link>

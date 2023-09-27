@@ -17,8 +17,11 @@
     "@types/three": "^0.156.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-loader-spinner": "^4.0.0",
     "react-router-dom": "^6.16.0",
     "react-select": "^5.7.5",
+    "react-slick": "^0.29.0",
+    "react-spinners": "^0.13.8",
     "three": "^0.156.1"
   },
   "devDependencies": {
