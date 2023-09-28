@@ -10,6 +10,7 @@ interface ItemProps{
     aboutHeaderText: string;
     readMore: string;
     freePulse: string;
+    consultancy:boolean;
     
 }
 interface SolutionCardProps{
@@ -28,12 +29,15 @@ const SolutionsCard = ({item}:SolutionCardProps) => {
         <p className="text-[#737373] capitalize" >{item.aboutHeaderText}</p>
     
             <div  className="flex mx-0 items-center gap-3" >
+                {!item.consultancy ? 
+                
                 <Link to={item.freePulse} >
                     <button className='w-[120px] py-[6px] bg-primary text-white border border-transparent text-sm  rounded-md'> Login</button>
-                </Link>
-                {/* <Link to={item.readMore} target={item.freePulse === '' ? "" : "_blank"} > */}
+                </Link> :""
+            }
+             
                 <Link to={item.readMore}  >
-                        <button  className='w-[120px] py-[6px] bg-transparent text-primary border border-primary text-sm   rounded-md' > Read More</button>
+                        <button  className={` w-[120px] py-[6px] bg-transparent text-primary border border-primary text-sm   rounded-md`} > Read More</button>
                 </Link>
             </div>
      

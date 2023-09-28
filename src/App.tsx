@@ -5,6 +5,7 @@ import ErrorPage from "./pages/ErrorPage";
 import { Suspense, lazy } from "react";
 import Loader from "./components/Loader";
 import DashboardLayout from "./layout/DashboardLayout";
+import OurServices from "./pages/services/OurServices";
 
 function App() {
   const HomePage = lazy(() => import("./pages/HomePage"));
@@ -48,6 +49,16 @@ function App() {
         </Suspense>
       ),
       errorElement: <ErrorPage />,
+    },
+    {
+      path: "/our-services",
+      element: (
+        <Suspense fallback={<Loader />}>
+          <DashboardLayout>
+            <OurServices />
+          </DashboardLayout>
+        </Suspense>
+      ),
     },
     {
       path: "/services/corporate-strategy",

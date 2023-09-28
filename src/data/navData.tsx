@@ -7,7 +7,7 @@ export const solutionsNavData=[
     {
         headerText:'E-Metric Suite',
         aboutHeaderText:"Performance Management Software",
-        url:"https://emetricsuite.workplacestars.com"
+        url:"https://emetric.workplacestars.com"
     },
     {
         headerText:'Sequential Jobs',
@@ -32,7 +32,7 @@ export const servicesNavData=[
     },   
     {
         headerText:'International Market Entry',
-        url:"/services/international-market-entry"
+        url:"/our-services"
     },   
 ]
 

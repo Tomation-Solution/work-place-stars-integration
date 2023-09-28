@@ -93,7 +93,7 @@ const CustomPopOverWithForm = ({ title, demoButton }: CustomPopoverProps) => {
                   {/* Form section for big screens */}
                   <div className="hidden lg:grid font-normal">
                     {/* This form will only be displayed on screens with a width of 1024px or larger */}
-                    <form className="mt-4">
+                    <form className="mt-4 h-[460px]">
                       <div className="mb-4">
                         <label
                           htmlFor="name"
@@ -125,6 +125,25 @@ const CustomPopOverWithForm = ({ title, demoButton }: CustomPopoverProps) => {
                         />
                       </div>
 
+                       {/* Soluitons multi dropdown */}
+                       <div className="mb-4">
+                        <label
+                          htmlFor="solution"
+                          className="block text-sm font-normal text-gray-700"
+                        >
+                          Solution
+                        </label>
+                        {/* <CustomListBox /> */}
+                        <Select
+                          isMulti={true}
+                          defaultValue={selectedSolutions}
+                          // onChange={setSelectedOption}
+                          options={solutionOptions}
+                          onChange={handleSelectSolutionChange as any}
+                         
+                        />
+                      </div>
+
                       {/* Services multi dropdown */}
                       <div className="mb-4">
                         <label
@@ -139,27 +158,12 @@ const CustomPopOverWithForm = ({ title, demoButton }: CustomPopoverProps) => {
                           defaultValue={selectedServices}
                           // onChange={setSelectedOption}
                           options={serviceOptions}
+                          // minMenuHeight={800}
                           onChange={handleSelectServiceChange as any}
                         />
                       </div>
 
-                      {/* Soltitons multi dropdown */}
-                      <div className="mb-4">
-                        <label
-                          htmlFor="solution"
-                          className="block text-sm font-normal text-gray-700"
-                        >
-                          Solution
-                        </label>
-                        {/* <CustomListBox /> */}
-                        <Select
-                          isMulti={true}
-                          defaultValue={selectedSolutions}
-                          // onChange={setSelectedOption}
-                          options={solutionOptions}
-                          onChange={handleSelectSolutionChange as any}
-                        />
-                      </div>
+                     
 
                       <div className="mb-4">
                         <label

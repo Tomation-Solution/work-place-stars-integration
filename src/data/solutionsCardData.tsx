@@ -1,6 +1,7 @@
 import emetric from '../assets/solutions/emetric.svg'
 import org360 from '../assets/solutions/org.svg'
 import sequential from '../assets/solutions/sequential-logo.png'
+import workplaceStars from '../assets/logo.svg'
 
 export const allSolutionsCardData=[
     {
@@ -9,15 +10,17 @@ export const allSolutionsCardData=[
         solution:'(Org360)',
         aboutHeaderText:"Elevate your business with our Employee Feedback Survey.",
         readMore:"https://raredolls.workplacestars.com",
-        freePulse:"https://raredolls.tk/login.php"
+        freePulse:"https://raredolls.tk/login.php",
+        consultancy:false,
     },
     {
         image:emetric,
         headerText:'Performance Management',
         solution:'(E-Metrics Suite)',
         aboutHeaderText:"Simplify HR tasks, manage employee records effortlessly",
-        readMore:"https://emetricsuite.workplacestars.com",
-        freePulse:"https://app.emetricsuite.com/"
+        readMore:"https://emetric.workplacestars.com",
+        freePulse:"https://app.emetricsuite.com/",
+        consultancy:false,
     },
     {
         image:sequential,
@@ -26,15 +29,17 @@ export const allSolutionsCardData=[
         aboutHeaderText:"Elevate your business with our Employee Feedback Survey.",
         readMore:"https://sequentialjobs.workplacestars.com",
         freePulse:"https://app.sequentialjobs.com/login",
+        consultancy:false,
        
     },
     {
-        image:emetric,
+        image:workplaceStars,
         headerText:'Consultancy Service',
         solution:'(Enterprise Transformation)',
         aboutHeaderText:"process documentation, strategy, KPI analytics, appraisal data.",
-        readMore:"https://raredolls.tk/review/",
-        freePulse:""
+        readMore:"/our-services",
+        freePulse:"",
+        consultancy:true,
     },
    
 ]
