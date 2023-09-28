@@ -6,7 +6,7 @@ const Hero = () => {
       
       <div className="  w-full h-full flex flex-column items-center ">
       
-        <div className="animate-bounce xl:col-span-2 ">
+        <div className="xl:col-span-2 ">
           <h3 className="text-white text-center md:text-left xs:text-red-400 text-[30px] leading-[50px]  sm:text-[38px] sm:leading-[63px] md:text-[45px] md:leading-[60px]  lg:text-[55px] lg:leading-[70px] xl:text-[58px] font-bold leading-1 ml-5   xl:leading-[80px]">
             Empowering Performance <br />
             Through Engangement, <br />
