@@ -1,5 +1,5 @@
 
-import heroImg from '../assets/hero-img.png'
+// import heroImg from '../assets/hero-img.png'
 const Hero = () => {
   return (
     <div className=" font-poppins bg-gradient-to-br from-[#0d5574] via-[#337ba0] to-[#569fcb] p-4 h-screen w-full flex items-center  ">
@@ -23,7 +23,7 @@ const Hero = () => {
         </div>
        
         <div  className='col-span-1'>
-          <img src={heroImg} className='object-fit w-[450px] ' alt="" />
+          {/* <img src={heroImg} className='object-fit w-[450px] ' alt="" /> */}
         </div>
       </div>
      
