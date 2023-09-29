@@ -43,11 +43,11 @@ export const aboutNavData=[
     },
     {
         headerText:'Our Client and Testimonials',
-        url:""
+        url:"/about/client-and-testimony"
     },
     {
         headerText:'Our Value Proposition, Our Mission & Vision',
-        url:"/solutions/values-mission-vision"
+        url:"/about/values-mission-vision"
     },   
 ]
 

@@ -6,6 +6,7 @@ import { Suspense, lazy } from "react";
 import Loader from "./components/Loader";
 import DashboardLayout from "./layout/DashboardLayout";
 import OurServices from "./pages/services/OurServices";
+import ClientAndTestimonials from "./pages/about/ClientAndTestimonials";
 
 function App() {
   const HomePage = lazy(() => import("./pages/HomePage"));
@@ -111,11 +112,21 @@ function App() {
       ),
     },
     {
-      path: "/solutions/values-mission-vision",
+      path: "/about/values-mission-vision",
       element: (
         <Suspense fallback={<Loader />}>
           <DashboardLayout>
             <ValuesMissionVison />
+          </DashboardLayout>
+        </Suspense>
+      ),
+    },
+    {
+      path: "/about/client-and-testimony",
+      element: (
+        <Suspense fallback={<Loader />}>
+          <DashboardLayout>
+            <ClientAndTestimonials />
           </DashboardLayout>
         </Suspense>
       ),
