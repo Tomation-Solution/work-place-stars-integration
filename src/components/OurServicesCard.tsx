@@ -12,7 +12,7 @@ interface OurServicesCardProps {
 
 const OurServicesCard = ({serviceNumber,renderedService,aboutService,buttonText,linkToPage,isConsultancyButton}:OurServicesCardProps) => {
   return (
-    <div className="flex word-break shadow-md border p-5 flex flex-col justify-between  gap-7 rounded-md text-sm" >
+    <div className="word-break shadow-md border p-5 flex flex-col justify-between  gap-7 rounded-md text-sm" >
     <div className="flex items-center gap-2" >
     <span className="text-3xl text-primary font-bold " >{serviceNumber}.</span>
     <span className="text-xl text-primary" >{renderedService}</span>

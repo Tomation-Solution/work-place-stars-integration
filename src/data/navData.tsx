@@ -54,7 +54,7 @@ export const aboutNavData=[
 export const freePulseData=[
     {
         headerText:'Org360',
-        url:"/"
+        url:"https://raredolls.tk/review/"
     },
     {
         headerText:'Emetrics',
