@@ -51,6 +51,17 @@ export const aboutNavData=[
     },   
 ]
 
+export const freePulseData=[
+    {
+        headerText:'Org360',
+        url:"/"
+    },
+    {
+        headerText:'Emetrics',
+        url:"/free-pulse/emetrics"
+    },
+]
+
 export const loginData=[
     {
         headerText:'Login to Org360',

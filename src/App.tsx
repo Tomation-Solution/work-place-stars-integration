@@ -7,6 +7,7 @@ import Loader from "./components/Loader";
 import DashboardLayout from "./layout/DashboardLayout";
 import OurServices from "./pages/services/OurServices";
 import ClientAndTestimonials from "./pages/about/ClientAndTestimonials";
+import Emetrics from "./pages/freepulse/Emetrics";
 
 function App() {
   const HomePage = lazy(() => import("./pages/HomePage"));
@@ -127,6 +128,16 @@ function App() {
         <Suspense fallback={<Loader />}>
           <DashboardLayout>
             <ClientAndTestimonials />
+          </DashboardLayout>
+        </Suspense>
+      ),
+    },
+    {
+      path: "/free-pulse/emetrics",
+      element: (
+        <Suspense fallback={<Loader />}>
+          <DashboardLayout>
+            <Emetrics />
           </DashboardLayout>
         </Suspense>
       ),

@@ -6,18 +6,23 @@ import {
   ChevronDownIcon,
 } from "@heroicons/react/24/outline";
 import logo from "../assets/logo.svg";
-import { Popover, Transition } from "@headlessui/react";
+import {  Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 // import { solutionsdata } from "../data/solutionsData";
 import { loginData } from "../data/loginData";
 import CustomPopover from "./CustomPopover";
-import { aboutNavData,servicesNavData,solutionsNavData } from "../data/navData";
+import { aboutNavData,freePulseData,servicesNavData,solutionsNavData } from "../data/navData";
 import CustomPopOverWithForm from "./CustomPopOverWithForm";
+
+
+
+
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-
+ 
+  
 
   useEffect(() => {
     const handleShadow = () => {
@@ -55,7 +60,16 @@ const Navbar = () => {
             <CustomPopover title="Services" data={servicesNavData}  />
             <CustomPopover title="Solutions" data={solutionsNavData}  />
             <CustomPopover title="About" data={aboutNavData}  />
-            <CustomPopOverWithForm title="Free Pulse" />
+            <CustomPopover title="Free Pulse " data={freePulseData} smallSize  />
+            {/* <CustomPopOverWithForm title="Free Pulse" /> */}
+           
+
+            {/* <Test /> */}
+           
+
+          
+
+       
             <CustomPopOverWithForm title="Become A provider" />
           
             <Link
