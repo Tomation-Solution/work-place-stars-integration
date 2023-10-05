@@ -16,7 +16,7 @@ const OurTeam = () => {
            About Our Team
           </h3>
           <p className="font-light">
-            Enterprise Metric Suite Solutions Limited is made up of an intricate
+          Workplace Stars LLC is made up of an intricate
             blend of professionals and consultants, who bring their years of
             experience and know-how to every project undertaken. Our structure
             consists of a board, associates, and management team; each ensuring

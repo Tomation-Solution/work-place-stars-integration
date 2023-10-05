@@ -2,7 +2,7 @@ export const solutionsNavData=[
     {
         headerText:'Org360',
         aboutHeaderText:"Employee Engagement Management Software",
-        url:"https://raredolls.workplacestars.com"
+        url:"https://raredolls.tk/"
     },
     {
         headerText:'E-Metric Suite',
