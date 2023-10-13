@@ -8,6 +8,8 @@ import DashboardLayout from "./layout/DashboardLayout";
 import OurServices from "./pages/services/OurServices";
 import ClientAndTestimonials from "./pages/about/ClientAndTestimonials";
 import Emetrics from "./pages/freepulse/Emetrics";
+import BlogHomePage from "./pages/blog/BlogHomePage";
+import BlogDetailsPage from "./pages/blog/BlogDetailsPage";
 
 function App() {
   const HomePage = lazy(() => import("./pages/HomePage"));
@@ -138,6 +140,26 @@ function App() {
         <Suspense fallback={<Loader />}>
           <DashboardLayout>
             <Emetrics />
+          </DashboardLayout>
+        </Suspense>
+      ),
+    },
+    {
+      path: "/blog",
+      element: (
+        <Suspense fallback={<Loader />}>
+          <DashboardLayout>
+            <BlogHomePage />
+          </DashboardLayout>
+        </Suspense>
+      ),
+    },
+    {
+      path: "/blog/:id",
+      element: (
+        <Suspense fallback={<Loader />}>
+          <DashboardLayout>
+            <BlogDetailsPage />
           </DashboardLayout>
         </Suspense>
       ),
