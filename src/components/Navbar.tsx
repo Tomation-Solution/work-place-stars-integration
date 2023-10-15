@@ -74,7 +74,7 @@ const Navbar = () => {
           
             <Link
               className="mr-4"
-              to="https://sequentialjobs.workplacestars.com/blog"
+              to="/blog"
               
             >
               <li className="navlink">Research</li>
