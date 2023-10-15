@@ -20,6 +20,7 @@ type BlogType={
   
 const BlogDetailsPage = () => {
     const [blog,setBlog] = useState<BlogType|null>(null)
+   
     // const [loading,setLoading] = useState(false)
   
     const { id } = useParams();
@@ -75,7 +76,7 @@ const BlogDetailsPage = () => {
       </> : <Loader /> }
         {/* header */}
         </section>
-        <section className={`col-span-2 grid place-items-center ${blog ? "" : "mt-3"}`}>
+        <section className={`col-span-2 my-8 ${blog ? "" : "mt-3"}`}>
             <div>
 
                 <h3 className='font-bold mb-8 text-center text-2xl' >Our Products</h3>

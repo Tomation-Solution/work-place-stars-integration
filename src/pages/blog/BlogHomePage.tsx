@@ -23,7 +23,18 @@ const BlogHomePage = () => {
 
   const [loading,setLoading] = useState(false)
   const [blogData,setBlogData] = useState<BlogType[]>([])
-  // const [look_up,setLook_up] = useState<string>('')
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Calculate the current items to display based on the current page
+  const itemsPerPage = 10;
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = blogData.slice(indexOfFirstItem, indexOfLastItem);
+ 
+
+   // Pagination logic
+   const totalPages = Math.ceil(blogData.length / itemsPerPage);
+   const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
 
 
   const getBlogs = async()=>{
@@ -46,13 +57,30 @@ const BlogHomePage = () => {
       {loading && <Loader />}
 
     <div  className="flex flex-col items-center w-[90%] mx-auto" >
-      {blogData.map((data,index:number)=>(
+      {currentItems.map((data,index:number)=>(
         
         <BlogNewsInfo key={index} data={data} variant={index%2==0?'evenPost':'oddPost'} />
       ))}
       
     </div>
-    <div>
+    <div className="mt-4  flex items-center justify-center">
+
+<ul className="flex space-x-2">
+   {pageNumbers.map((number,index)=>(
+     <li key={index}>
+     <button
+       className={`${
+         currentPage === number ? 'bg-primary text-white' : 'bg-gray-200'
+       } px-3 py-2 rounded-sm focus:outline-none`}
+       onClick={() => setCurrentPage(number)}
+     >
+       {number}
+     </button>
+   </li>
+   ))}
+  </ul>
+</div>
+    <div className="my-6" >
       <div className="flex flex-col items-center w-[90%] mx-auto" >
         <h3 className="font-medium text-[1.8rem]" >Explore More Topics</h3>
         <p className="text-center md:text-left" >Ready to brush up on something new? We've got more to read right this way.</p>
@@ -61,6 +89,8 @@ const BlogHomePage = () => {
           <div className="bg-[#dff3fb] border-l-[4px] border-primary p-2 font-medium" >Instagram Markerting</div>
         </div>
       </div>
+
+      
       <SubscribeToBlog />
     </div>
      
